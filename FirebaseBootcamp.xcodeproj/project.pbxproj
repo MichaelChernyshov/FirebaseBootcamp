@@ -11,6 +11,8 @@
 		203B787B2C066BAE005A453B /* AuthenticationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203B787A2C066BAE005A453B /* AuthenticationView.swift */; };
 		203B787D2C066CA3005A453B /* SignInEmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203B787C2C066CA3005A453B /* SignInEmailView.swift */; };
 		203B787F2C066E26005A453B /* AuthenticationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203B787E2C066E26005A453B /* AuthenticationManager.swift */; };
+		203B78812C06741D005A453B /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203B78802C06741D005A453B /* RootView.swift */; };
+		203B78832C067688005A453B /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203B78822C067688005A453B /* SettingsView.swift */; };
 		205D51922C03483F00CF2FD5 /* FirebaseBootcampApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205D51912C03483F00CF2FD5 /* FirebaseBootcampApp.swift */; };
 		205D51942C03483F00CF2FD5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205D51932C03483F00CF2FD5 /* ContentView.swift */; };
 		205D51962C03484000CF2FD5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 205D51952C03484000CF2FD5 /* Assets.xcassets */; };
@@ -24,6 +26,8 @@
 		203B787A2C066BAE005A453B /* AuthenticationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationView.swift; sourceTree = "<group>"; };
 		203B787C2C066CA3005A453B /* SignInEmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInEmailView.swift; sourceTree = "<group>"; };
 		203B787E2C066E26005A453B /* AuthenticationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationManager.swift; sourceTree = "<group>"; };
+		203B78802C06741D005A453B /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		203B78822C067688005A453B /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		205D518E2C03483F00CF2FD5 /* FirebaseBootcamp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirebaseBootcamp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		205D51912C03483F00CF2FD5 /* FirebaseBootcampApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseBootcampApp.swift; sourceTree = "<group>"; };
 		205D51932C03483F00CF2FD5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -57,6 +61,8 @@
 			isa = PBXGroup;
 			children = (
 				203B787A2C066BAE005A453B /* AuthenticationView.swift */,
+				203B78802C06741D005A453B /* RootView.swift */,
+				203B78822C067688005A453B /* SettingsView.swift */,
 				203B787C2C066CA3005A453B /* SignInEmailView.swift */,
 				203B787E2C066E26005A453B /* AuthenticationManager.swift */,
 			);
@@ -180,8 +186,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				203B78832C067688005A453B /* SettingsView.swift in Sources */,
 				205D51942C03483F00CF2FD5 /* ContentView.swift in Sources */,
 				205D51922C03483F00CF2FD5 /* FirebaseBootcampApp.swift in Sources */,
+				203B78812C06741D005A453B /* RootView.swift in Sources */,
 				203B787B2C066BAE005A453B /* AuthenticationView.swift in Sources */,
 				203B787F2C066E26005A453B /* AuthenticationManager.swift in Sources */,
 				203B787D2C066CA3005A453B /* SignInEmailView.swift in Sources */,
