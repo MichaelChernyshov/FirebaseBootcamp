@@ -12,26 +12,28 @@ final class SignInEmailViewModel: ObservableObject {
     @Published var email = ""
     @Published var password = ""
     
-    func signIn () {
+    func signUp () async throws {
         guard !email.isEmpty, !password.isEmpty else {
             print("No email or password found")
             return
         }
         
-        Task {
-            do {
-                let returnedData = try await AuthenticationManager.shared.createUser(email: email, password: password)
-                print("Success")
-                print(returnedData)
-            } catch {
-                print(error.localizedDescription)
-            }
+        _ = try await AuthenticationManager.shared.createUser(email: email, password: password)
+    }
+    
+    func signIn () async throws {
+        guard !email.isEmpty, !password.isEmpty else {
+            print("No email or password found")
+            return
         }
+        
+        _ = try await AuthenticationManager.shared.signInUser(email: email, password: password)
     }
 }
 
 struct SignInEmailView: View {
     @StateObject private var vm = SignInEmailViewModel()
+    @Binding var showSignInView: Bool
     
     var body: some View {
         VStack {
@@ -46,7 +48,23 @@ struct SignInEmailView: View {
                 .cornerRadius(10)
             
             Button {
-                vm.signIn()
+                Task {
+                    do {
+                        try await vm.signUp()
+                        showSignInView = false
+                        return
+                    } catch {
+                        print(error)
+                    }
+                    
+                    do {
+                        try await vm.signIn()
+                        showSignInView = false
+                        return
+                    } catch {
+                        print(error)
+                    }
+                }
             } label: {
                 Text("Sign in")
                     .font(.headline)
@@ -56,7 +74,7 @@ struct SignInEmailView: View {
                     .background(.blue)
                     .cornerRadius(10)
             }
-
+            
         }
         .padding()
         .navigationTitle("Sign In With Email")
@@ -65,6 +83,6 @@ struct SignInEmailView: View {
 
 #Preview {
     NavigationStack {
-        SignInEmailView()
+        SignInEmailView(showSignInView: .constant(false))
     }
 }
