@@ -13,6 +13,15 @@ final class SettingsViewModel: ObservableObject {
     func signOut() throws {
         try AuthenticationManager.shared.signOut()
     }
+    
+    func resetPassword() async throws {
+        let authUser = try AuthenticationManager.shared.getAuthenticatedUser()
+        
+        guard let email = authUser.email else {
+            throw URLError(.fileDoesNotExist)
+        }
+        try await AuthenticationManager.shared.resetPassword(email: email)
+    }
 }
 
 struct SettingsView: View {
@@ -21,7 +30,7 @@ struct SettingsView: View {
     
     var body: some View {
         List {
-            Button {
+            Button("Log out") {
                 Task {
                     do {
                         try vm.signOut()
@@ -30,8 +39,17 @@ struct SettingsView: View {
                         print("Error signing out")
                     }
                 }
-            } label: {
-                Text("Log out")
+            }
+            
+            Button("Reset password") {
+                Task {
+                    do {
+                        try await vm.resetPassword()
+                        print("Password reset")
+                    } catch {
+                        print("Error signing out")
+                    }
+                }
             }
 
         }
