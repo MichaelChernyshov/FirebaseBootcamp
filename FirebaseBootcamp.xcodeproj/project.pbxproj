@@ -23,6 +23,7 @@
 		205D51A32C034A0600CF2FD5 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 205D51A22C034A0600CF2FD5 /* FirebaseAnalytics */; };
 		205D51A52C034A0600CF2FD5 /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 205D51A42C034A0600CF2FD5 /* FirebaseAnalyticsSwift */; };
 		206263472C09C79400AB8986 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206263462C09C79400AB8986 /* Utilities.swift */; };
+		206263492C09D27C00AB8986 /* SignInGoogleHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206263482C09D27C00AB8986 /* SignInGoogleHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		205D51952C03484000CF2FD5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		205D51982C03484000CF2FD5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		206263462C09C79400AB8986 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		206263482C09D27C00AB8986 /* SignInGoogleHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInGoogleHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 			isa = PBXGroup;
 			children = (
 				203B787A2C066BAE005A453B /* AuthenticationView.swift */,
+				206263482C09D27C00AB8986 /* SignInGoogleHelper.swift */,
 				203B78802C06741D005A453B /* RootView.swift */,
 				203B78822C067688005A453B /* SettingsView.swift */,
 				203B787C2C066CA3005A453B /* SignInEmailView.swift */,
@@ -210,6 +213,7 @@
 				205D51942C03483F00CF2FD5 /* ContentView.swift in Sources */,
 				205D51922C03483F00CF2FD5 /* FirebaseBootcampApp.swift in Sources */,
 				203B78812C06741D005A453B /* RootView.swift in Sources */,
+				206263492C09D27C00AB8986 /* SignInGoogleHelper.swift in Sources */,
 				203B787B2C066BAE005A453B /* AuthenticationView.swift in Sources */,
 				203B787F2C066E26005A453B /* AuthenticationManager.swift in Sources */,
 				206263472C09C79400AB8986 /* Utilities.swift in Sources */,
